@@ -21,9 +21,13 @@ a:visited {
     text-decoration: none;
 }
 
+p{
+    margin: 3;
+}
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -81,6 +85,7 @@ h6 {
 
 .white-bg {
     background: var(--white-color);
+    color: var(--primary-color);
 }
 
 
@@ -189,4 +194,18 @@ intro-img {
 .intro-img img{
     max-width: 100%;
     height: auto;
+}
+
+.top3-content{
+    max-width: 64rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.top3-content h2{
+    text-transform: uppercase;
+    margin-bottom: 3rem;
 }
