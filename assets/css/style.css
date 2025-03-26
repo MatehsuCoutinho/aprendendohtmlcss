@@ -204,7 +204,7 @@ intro-img {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -409,4 +409,19 @@ table th {
 
 .form-group ::placeholder {
     color: rgba(255, 255, 255, 0.74);
+}
+
+.footer{
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer a{
+    color: inherit;
+    transition: all 300ms ease-in-out;
+    font-size: 1.8rem;
+}
+
+.footer a:hover{
+    color: crimson;
 }
