@@ -176,6 +176,7 @@ h6 {
     align-items: center;
     gap: var(--gap);
     min-height: 100vh;
+    margin-top: 0;
 }
 
 .intro-text-content,
@@ -430,6 +431,10 @@ table th {
     color: crimson;
 }
 
+.close-menu {
+    display: none;
+}
+
 @media (max-width: 800px) {
 
     .intro-content,
@@ -444,11 +449,62 @@ table th {
     }
 
     .gallery-img img {
-        width: 100%;
+        width: 90%;
     }
 
     .jobs-content {
         display: block;
         padding-left: 3rem;
+    }
+
+    .contact-intro{
+        padding-left: 2rem;
+    }
+
+    .menu {
+        bottom: 0;
+    }
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 5;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after{
+        content: '×';
+    }
+
+    .menu-spacing {
+        display: none;
     }
 }
